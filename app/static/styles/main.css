@@ -1,11 +1,17 @@
-p, h1, h2, h3, h4, h5, h6, button {
+
+/* I commented this b/c it's the stuff MLH provided us with.
+
+
+
+ */
+/* p, h1, h2, h3, h4, h5, h6, button {
     font-family: "Roboto", serif;
 }
 
 body {
     background-color: #f5f5f9;
     background-size: cover;
-    width: auto; 
+    width: auto;
     overflow-x: hidden;
     font-family: "Roboto", serif;
     margin: 0px;
@@ -68,7 +74,7 @@ body {
         max-height: 100%;
         margin-left: auto;
         margin-right: auto;
-        display: block;        
+        display: block;
         padding: 20px;
 }
 
@@ -94,4 +100,107 @@ body {
     color: white;
     font-size: 50px;
     font-weight: 700;
+} */
+
+
+:root {
+	--blue-accent: #6F7CCE;
+	--font-gray: #424242;
+	--background-gray: #F6F6F6;
+	--footer-color: #E7ECEF;
+	--text-color: #000;
+}
+
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+h1 {
+	font-weight:900;
+	font-size: 56px;
+}
+
+h2 {
+	font-weight:500;
+	font-size: 36px;
+}
+
+h3 {
+	font-weight:600;
+	font-size: 32px;
+	margin-top: 60px;
+}
+
+h4 {
+	font-weight: 500;
+	font-size: 24px;
+}
+
+p {
+	font-size: 18px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+.hidden {
+	display: none;
+}
+
+#page {
+    display: flex;
+    /* flex-direction: column; */
+    margin-left: 15vw;
+    margin-right: 15vw;
+}
+
+
+
+.theme-light {
+	--background-gray: #F6F6F6;
+	--text-color: #000;
+	--blue-accent: #6F7CCE;
+	--footer-color: #E7ECEF;
+	--project-box: #E7ECEF;
+
+}
+
+
+
+/** =============== Nav Styling ===============*/
+#navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+	padding-left: 8vw;
+    padding-right: 8vw;
+    padding-top: 4vh;
+    padding-bottom: 3vh;
+}
+
+#nav-items {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.nav-item {
+    padding-left: 56px;
+}
+
+.nav-item a {
+	font-size: 20px;
+	font-weight: 700;
+}
+
+.icon {
+	width: 32px;
+}
+
+.nav-link:hover {
+	color: var(--blue-accent);
 }
