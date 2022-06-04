@@ -102,6 +102,10 @@ body {
     font-weight: 700;
 } */
 
+* {
+    margin: 0;
+    padding: 0;
+}
 
 :root {
 	--blue-accent: #6F7CCE;
@@ -138,6 +142,7 @@ h4 {
 
 p {
 	font-size: 18px;
+    margin: 50px;
 }
 
 a {
@@ -157,7 +162,34 @@ a {
     margin-right: 15vw;
 }
 
+.about {
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 100px;
+}
 
+.altblock {
+    padding: 100px;
+    color: white;
+    background-color: black;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.split {
+    display: flex;
+}
+
+.imgpad {
+    padding: 50px;
+}
 
 .theme-light {
 	--background-gray: #F6F6F6;
