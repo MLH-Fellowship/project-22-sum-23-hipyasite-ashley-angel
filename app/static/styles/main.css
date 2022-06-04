@@ -1,11 +1,17 @@
-p, h1, h2, h3, h4, h5, h6, button {
+
+/* I commented this b/c it's the stuff MLH provided us with. 
+
+
+
+ */
+/* p, h1, h2, h3, h4, h5, h6, button {
     font-family: "Roboto", serif;
 }
 
 body {
     background-color: #f5f5f9;
     background-size: cover;
-    width: auto; 
+    width: auto;
     overflow-x: hidden;
     font-family: "Roboto", serif;
     margin: 0px;
@@ -68,7 +74,7 @@ body {
         max-height: 100%;
         margin-left: auto;
         margin-right: auto;
-        display: block;        
+        display: block;
         padding: 20px;
 }
 
@@ -94,4 +100,420 @@ body {
     color: white;
     font-size: 50px;
     font-weight: 700;
+} */
+
+
+:root {
+	--blue-accent: #6F7CCE;
+	--font-gray: #424242;
+	--background-gray: #F6F6F6;
+	--footer-color: #E7ECEF;
+	--text-color: #000;
+}
+
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+h1 {
+	font-weight:900;
+	font-size: 56px;
+}
+
+h2 {
+	font-weight:500;
+	font-size: 36px;
+}
+
+h3 {
+	font-weight:600;
+	font-size: 32px;
+	margin-top: 60px;
+}
+
+h4 {
+	font-weight: 500;
+	font-size: 24px;
+}
+
+p {
+	font-size: 18px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+.hidden {
+	display: none;
+}
+
+#page {
+    display: flex;
+    /* flex-direction: column; */
+    margin-left: 15vw;
+    margin-right: 15vw;
+}
+
+.theme-dark {
+	--background-gray: #37353B;
+	--text-color: #EEE;
+	--blue-accent: #ABC4FF;
+	--footer-color: #262429;
+	--project-box: #2E2C34;
+	transition: 0.3s;
+}
+
+.theme-light {
+	--background-gray: #F6F6F6;
+	--text-color: #000;
+	--blue-accent: #6F7CCE;
+	--footer-color: #E7ECEF;
+	--project-box: #E7ECEF;
+	transition: 0.3s;
+}
+
+@keyframes slide {
+	0% {transform: translateX(-10%); }
+	100% { transform: translateX(0%); }
+}
+
+/** =============== Nav Styling ===============*/
+#navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+	padding-left: 8vw;
+    padding-right: 8vw;
+    padding-top: 4vh;
+    padding-bottom: 3vh;
+}
+
+#nav-items {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.nav-item {
+    padding-left: 56px;
+}
+
+.nav-item a {
+	font-size: 20px;
+	font-weight: 700;
+}
+
+#switch {
+	/* display: none; */
+}
+
+.icon {
+	width: 32px;
+}
+
+.nav-link:hover {
+	color: var(--blue-accent);
+}
+/** =============== Index Front Page ===============*/
+
+.content {
+	padding-left: 10vw;
+    padding-right: 10vw;
+	animation: slide 1s ease-out 1;
+}
+
+.heading {
+	padding-left: 6vw;
+    padding-right: 6vw;
+}
+
+#greeting {
+	padding-top: 10vh;
+}
+
+.padding-above {
+	padding-top: 15vh;
+}
+
+.blue {
+	color: var(--blue-accent);
+}
+
+.subheading {
+	color: var(--blue-accent);
+}
+/*
+#sequence {
+	animation: fade infinite;
+	animation-duration: 2s;
+	animation-delay: 1.94s;
+}
+
+#sequenceA {
+	animation: fade infinite;
+	animation-duration: 2s;
+	animation-delay: 1.94s;
+}
+
+@keyframes fade {
+	0% {opacity: 0%; }
+	30% { opacity: 100%; }
+	80% { opacity: 100%; }
+	100% { opacity: 0%; }
+} */
+
+/** =============== Work Page ===============*/
+.cards {
+	padding-left: 16vw;
+    padding-right: 16vw;
+	animation: slide 1s ease-out 1;
+}
+
+.project-tags {
+    display: flex;
+    flex-direction: row;
+}
+
+.tag {
+    border-radius: 10px;
+    background-color: var(--footer-color);
+    margin-right: 8px;
+}
+
+#tag {
+	margin: 0px;
+	padding: 5px 20px 5px 20px;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.project {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+	padding: 30px 30px 30px 30px;
+    background-color:var(--background-gray);
+    transition: background-color 300ms ease-in-out;
+}
+
+.project:hover {
+	border-radius: 10px;
+    background-color: var(--project-box);
+}
+
+.project-img #prj-img {
+    transition: 0.3s;
+}
+
+.project:hover #prj-img {
+	border-radius: 10px;
+    transform: scale(1.04);
+}
+
+.project-img {
+    display: flex;
+    flex: 1.2;
+    max-width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin-right: 10px;
+}
+
+#prj-img {
+	border-radius: 10px;
+    max-width: 90%;
+}
+
+.project-desc {
+    display: flex;
+    flex-direction: column;
+}
+
+.project-desc #desc {
+    max-width: 80%;
+}
+
+/** =============== Individual Projects Page ===============*/
+
+.project-content {
+	padding: 0px 10px 10px 10px;
+}
+
+.project-head-info {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.skills-2 {
+	display: flex;
+	flex-direction: row;
+}
+
+.skills-col2 {
+	margin-left: 24px;
+}
+
+.project-images {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.project-image {
+	width: 48%;
+}
+
+.project-links {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+}
+
+.project-link {
+	font-size: 24px;
+	font-weight: 500;
+	color: var(--blue-accent);
+}
+
+.project-end-links {
+	margin-top: 60px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+/** =============== About Page ===============*/
+.section1 {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	padding-top: 30px;
+}
+
+.img-self {
+	width: 100%;
+	border-radius: 10px;
+}
+
+.about-text {
+	width: 50%;
+}
+
+.about-img {
+	width: 35%;
+}
+
+.image-row {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	padding-top: 2vh;
+}
+
+.art {
+	height: 350px;
+}
+
+#see-more {
+	text-decoration: none;
+	color: var(--text-color);
+}
+
+/** =============== Index Timeline ===============*/
+#line {
+	padding-top: 60px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 0;
+}
+
+/** =============== Footer ===============*/
+.footer {
+	background-color: var(--footer-color);
+	color: var(--text-color);
+	margin-top: 100px;
+	padding-left: 16vw;
+    padding-right: 16vw;
+    padding-top: 10vh;
+    padding-bottom: 12vh;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+#footer-title {
+	margin: 0%;
+}
+
+#footer-links {
+	text-align: right;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+}
+
+/* LIGHTBOXES */
+
+.lightbox {
+	display: none;
+	position: fixed;
+	z-index: 100;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	top: 0;
+	left: 0;
+	background: rgba(66,66,66,0.8);
+}
+
+.lightbox img {
+	max-width: 75%;
+	max-height: 75%;
+    margin-top: 6%;
+}
+
+.lightbox:target {
+	outline: none;
+	display: block;
+}
+
+.lightbox .x {
+    position: absolute;
+    top: 1vw;
+    right: 2vw;
+    color: var(--blue-accent);
+    font-size: 2vw;
+}
+
+
+.modal-box {
+	width: 50%;
+	height: 50%;
+	background-color: var(--background-gray);
+}
+
+
+.glass {
+	background: rgba(255, 255, 255, 0.28);
+	border-radius: 16px;
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+	backdrop-filter: blur(8.8px);
+	-webkit-backdrop-filter: blur(8.8px);
+	border: 1px solid rgba(255, 255, 255, 0.514);
+	width: 30%;
+	padding: 10px;
+    /* transform: rotate(.015turn); */
+	position: absolute;
+	z-index: 1;
+	right: 30%;
 }
