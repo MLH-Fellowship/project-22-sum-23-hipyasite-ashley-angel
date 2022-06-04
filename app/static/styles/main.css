@@ -205,7 +205,8 @@ a {
 }
 
 .nav-link:hover {
-	color: var(--blue-accent);
+	/* color: var(--blue-accent); */
+	text-decoration:  underline;
 }
 
 /* beginning of front page */
@@ -226,7 +227,15 @@ a {
 }
 
 .padding-above {
-	/* padding-top: 15vh; */
+	padding-top: 15vh;
 }
 
 /* Ending of front page */
+
+/* beginning of timeline  */
+.timelineInto {
+ margin: auto;
+ width: 60%;
+ border: 3px solid #73AD21;
+ padding: 10px;
+}
