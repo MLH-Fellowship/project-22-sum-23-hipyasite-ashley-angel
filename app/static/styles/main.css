@@ -157,14 +157,7 @@ a {
     margin-right: 15vw;
 }
 
-.theme-dark {
-	--background-gray: #37353B;
-	--text-color: #EEE;
-	--blue-accent: #ABC4FF;
-	--footer-color: #262429;
-	--project-box: #2E2C34;
-	transition: 0.3s;
-}
+
 
 .theme-light {
 	--background-gray: #F6F6F6;
@@ -172,13 +165,10 @@ a {
 	--blue-accent: #6F7CCE;
 	--footer-color: #E7ECEF;
 	--project-box: #E7ECEF;
-	transition: 0.3s;
+
 }
 
-@keyframes slide {
-	0% {transform: translateX(-10%); }
-	100% { transform: translateX(0%); }
-}
+
 
 /** =============== Nav Styling ===============*/
 #navbar {
@@ -205,10 +195,6 @@ a {
 .nav-item a {
 	font-size: 20px;
 	font-weight: 700;
-}
-
-#switch {
-	/* display: none; */
 }
 
 .icon {
