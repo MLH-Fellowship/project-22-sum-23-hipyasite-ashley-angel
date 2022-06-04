@@ -113,15 +113,18 @@ body {
 
 body {
     font-family: 'Noto Sans JP', sans-serif;
+		/* margin: 0%; */
 }
 
 h1 {
 	font-weight:900;
 	font-size: 56px;
+	/* background-color: red; */
 }
 
 h2 {
 	font-weight:500;
+	/* background-color: yellow; */
 	font-size: 36px;
 }
 
@@ -204,3 +207,26 @@ a {
 .nav-link:hover {
 	color: var(--blue-accent);
 }
+
+/* beginning of front page */
+.content {
+	padding-top: 50px;
+	padding-left: 30px;
+    padding-right: 10vw;
+
+}
+
+.heading {
+	/* padding-left: 6vw; */
+    /* padding-right: 6vw; */
+}
+
+#greeting {
+	padding-top: 10vh;
+}
+
+.padding-above {
+	/* padding-top: 15vh; */
+}
+
+/* Ending of front page */
