@@ -122,11 +122,17 @@ h1 {
 	/* background-color: red; */
 }
 
-h2 {
+.headerTwo {
 	font-weight:500;
 	/* background-color: yellow; */
 	font-size: 36px;
 }
+
+/* h2 {
+	font-weight:500;
+	/* background-color: yellow; */
+	font-size: 36px;
+} */
 
 h3 {
 	font-weight:600;
