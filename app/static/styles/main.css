@@ -218,9 +218,12 @@ a {
 /* beginning of front page */
 .content {
 	padding-top: 50px;
-	padding-left: 30px;
-  padding-right: 10vw;
-
+	/* padding-left: 176px; */
+  /* padding-right: 10vw; */
+	margin: auto;
+   width: 90%;
+   /* border: 3px solid green; */
+   /* padding: 10px; */
 
 
 }
@@ -246,6 +249,13 @@ a {
 	padding-bottom: 7rem;
 	/* background: #212121; */
 	position: relative;
+
+/* center */
+margin: auto;
+  width: 90%;
+  /* border: 3px solid green; */
+  /* padding: 10px; */
+
 	/* margin-top: 10%; */
 
 }
@@ -301,7 +311,12 @@ the projects sections
 
 .project:hover {
 	border-radius: 10px;
-    background-color: var(--project-box);
+    background-color: black;
+		color: white;
+}
+.project:hover .tag {
+	background-color: white;
+	color: black;
 }
 
 .project-img #prj-img {
