@@ -74,42 +74,6 @@ a {
 
 
 
-/** =============== Nav Styling ===============*/
-#navbar {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-	padding-left: 8vw;
-    padding-right: 8vw;
-    padding-top: 4vh;
-    padding-bottom: 3vh;
-}
-
-#nav-items {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-.nav-item {
-    padding-left: 56px;
-}
-
-.nav-item a {
-	font-size: 20px;
-	font-weight: 700;
-}
-
-.icon {
-	width: 32px;
-}
-
-.nav-link:hover {
-	/* color: var(--blue-accent); */
-	text-decoration:  underline;
-}
-
 /* beginning of front page */
 .content {
 	padding-top: 50px;

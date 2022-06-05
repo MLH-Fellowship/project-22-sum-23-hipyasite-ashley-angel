@@ -1,0 +1,116 @@
+:root {
+	--blue-accent: #6F7CCE;
+	--font-gray: #424242;
+	--background-gray: #F6F6F6;
+	--footer-color: #E7ECEF;
+	--text-color: #000;
+}
+
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+		/* margin: 0%; */
+}
+
+h1 {
+	font-weight:900;
+	font-size: 56px;
+	/* background-color: red; */
+}
+
+.headerTwo {
+	font-weight:500;
+	/* background-color: yellow; */
+	font-size: 36px;
+}
+
+h2 {
+	font-weight:500;
+
+	font-size: 36px;
+}
+
+h3 {
+	font-weight:600;
+	font-size: 32px;
+	margin-top: 60px;
+}
+
+h4 {
+	font-weight: 500;
+	font-size: 24px;
+}
+
+p {
+	font-size: 18px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+.hidden {
+	display: none;
+}
+
+#page {
+    display: flex;
+    /* flex-direction: column; */
+    margin-left: 15vw;
+    margin-right: 15vw;
+}
+
+
+
+.theme-light {
+	--background-gray: #F6F6F6;
+	--text-color: #000;
+	--blue-accent: #6F7CCE;
+	--footer-color: #E7ECEF;
+	--project-box: #E7ECEF;
+
+}
+
+.about {
+    height: 65vh;
+    width: 70vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 100px;
+    margin: auto;
+}
+
+.altblock {
+    padding: 100px;
+    color: white;
+    background-color: black;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10vh;
+}
+
+.mainblock {
+    padding: 100px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10vh;
+}
+
+.split {
+    display: flex;
+}
+
+.imgpad {
+    padding: 50px;
+    max-width: 50%;
+}

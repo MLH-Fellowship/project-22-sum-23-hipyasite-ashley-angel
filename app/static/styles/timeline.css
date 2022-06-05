@@ -2,11 +2,6 @@
   This is in charge of the timeline
  */
 
-*{
-  margin: 0;
-  padding: 0;
-
-}
 
 :root {
 	--timeline-color: #E7ECEF;
