@@ -158,6 +158,36 @@ a {
 }
 
 
+.altblock {
+    padding: 100px;
+    color: white;
+    background-color: black;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10vh;
+}
+
+.mainblock {
+    padding: 100px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10vh;
+}
+
+.split {
+    display: flex;
+}
+
+.imgpad {
+    padding: 50px;
+    max-width: 50%;
+}
 
 .theme-light {
 	--background-gray: #F6F6F6;
@@ -166,6 +196,18 @@ a {
 	--footer-color: #E7ECEF;
 	--project-box: #E7ECEF;
 
+}
+
+
+#leafletmap {
+    margin-top: 100px;
+    height: 60vh;
+    width: 100%;
+}
+
+.mappopup {
+    font-family: 'Noto Sans JP', sans-serif;
+    text-align: center;
 }
 
 
