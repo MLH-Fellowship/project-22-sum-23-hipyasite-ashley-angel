@@ -211,6 +211,7 @@ a {
 
 .imgpad {
     padding: 50px;
+    max-width: 50%;
 }
 
 .theme-light {

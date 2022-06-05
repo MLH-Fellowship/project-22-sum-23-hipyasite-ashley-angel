@@ -9,11 +9,11 @@ var marker1 = L.marker([38.54220, -121.74960]).addTo(map).on("click", () => {
     document.getElementById('hobby1').scrollIntoView();
 });
 
-var marker2 = L.marker([21.085,-86.847]).addTo(map).on("click", () => {
+var marker2 = L.marker([40.0139, -105.2748]).addTo(map).on("click", () => {
     document.getElementById('hobby2').scrollIntoView();
 });
 
-var marker3 = L.marker([40.0139, -105.2748]).addTo(map).on("click", () => {
+var marker3 = L.marker([21.085,-86.847]).addTo(map).on("click", () => {
     document.getElementById('hobby3').scrollIntoView();
 });
 
