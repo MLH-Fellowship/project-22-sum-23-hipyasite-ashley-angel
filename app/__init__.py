@@ -14,3 +14,7 @@ def index():
 @app.route('/home')
 def home():
     return render_template('home.html', title="hey", url=os.getenv("URL"))
+
+@app.route("/about")
+def about():
+    return render_template("about.html", title="About Lorem", url=os.getenv("URL"))
