@@ -1,0 +1,274 @@
+:root {
+	--blue-accent: #6F7CCE;
+	--font-gray: #424242;
+	--background-gray: #F6F6F6;
+	--footer-color: #E7ECEF;
+	--text-color: #000;
+}
+
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+		/* margin: 0%; */
+}
+
+h1 {
+	font-weight:900;
+	font-size: 56px;
+	/* background-color: red; */
+}
+
+.headerTwo {
+	font-weight:500;
+	/* background-color: yellow; */
+	font-size: 36px;
+}
+
+h2 {
+	font-weight:500;
+
+	font-size: 36px;
+}
+
+h3 {
+	font-weight:600;
+	font-size: 32px;
+	margin-top: 60px;
+}
+
+h4 {
+	font-weight: 500;
+	font-size: 24px;
+}
+
+p {
+	font-size: 18px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+.hidden {
+	display: none;
+}
+
+#page {
+    display: flex;
+    /* flex-direction: column; */
+    margin-left: 15vw;
+    margin-right: 15vw;
+}
+
+
+
+.theme-light {
+	--background-gray: #F6F6F6;
+	--text-color: #000;
+	--blue-accent: #6F7CCE;
+	--footer-color: #E7ECEF;
+	--project-box: #E7ECEF;
+
+}
+
+
+
+/** =============== Nav Styling ===============*/
+#navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+	padding-left: 8vw;
+    padding-right: 8vw;
+    padding-top: 4vh;
+    padding-bottom: 3vh;
+}
+
+#nav-items {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.nav-item {
+    padding-left: 56px;
+}
+
+.nav-item a {
+	font-size: 20px;
+	font-weight: 700;
+}
+
+.icon {
+	width: 32px;
+}
+
+.nav-link:hover {
+	/* color: var(--blue-accent); */
+	text-decoration:  underline;
+}
+
+/* beginning of front page */
+.content {
+	padding-top: 50px;
+	/* padding-left: 176px; */
+  /* padding-right: 10vw; */
+	margin: auto;
+   width: 90%;
+   /* border: 3px solid green; */
+   /* padding: 10px; */
+
+
+}
+
+.heading {
+	/* padding-left: 6vw; */
+    /* padding-right: 6vw; */
+}
+
+#greeting {
+	/* padding-top: 10vh; */
+}
+
+.padding-above {
+	padding-top: 15vh;
+}
+
+.hero-wapper {
+	display: flex;
+	/* justify-content: space-between; */
+	flex-wrap: wrap;
+	align-items: center;
+	padding-bottom: 7rem;
+	/* background: #212121; */
+	position: relative;
+
+/* center */
+margin: auto;
+  width: 90%;
+  /* border: 3px solid green; */
+  /* padding: 10px; */
+
+	/* margin-top: 10%; */
+
+}
+
+.hero-wrapper .hero-text-wrapper {
+	width: 40rem;
+	max-width: 100%;
+	overflow: hidden;
+}
+
+.hero-wrapper .hero-image-wrapper  {
+	overflow: hidden;
+}
+
+/*
+the projects sections
+ */
+
+ .cards {
+	padding-left: 16vw;
+    padding-right: 16vw;
+	animation: slide 1s ease-out 1;
+}
+
+.project-tags {
+    display: flex;
+    flex-direction: row;
+}
+
+.tag {
+    border-radius: 10px;
+    background-color: var(--footer-color);
+    margin-right: 8px;
+}
+
+#tag {
+	margin: 0px;
+	padding: 5px 20px 5px 20px;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.project {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+	padding: 30px 30px 30px 30px;
+    background-color:var(--background-gray);
+    transition: background-color 300ms ease-in-out;
+}
+
+.project:hover {
+	border-radius: 10px;
+    background-color: black;
+		color: white;
+}
+.project:hover .tag {
+	background-color: white;
+	color: black;
+}
+
+.project-img #prj-img {
+    transition: 0.3s;
+}
+
+.project:hover #prj-img {
+	border-radius: 10px;
+    transform: scale(1.04);
+}
+
+.project-img {
+    display: flex;
+    flex: 1.2;
+    max-width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin-right: 10px;
+}
+
+#prj-img {
+	border-radius: 10px;
+    max-width: 90%;
+}
+
+.project-desc {
+    display: flex;
+    flex-direction: column;
+}
+
+.project-desc #desc {
+    max-width: 80%;
+
+}
+
+/* set up for tag */
+
+.tag2 {
+	height: 200px;
+   position: relative;
+   border: 3px solid green;
+}
+
+
+#tag2 {
+	margin: 0;
+  position: absolute;
+  /* top: 50%; */
+  /* -ms-transform: translateY(-50%); */
+  /* transform: translateY(-50%); */
+	/* margin: 0px; */
+	/* padding: 5px 20px 5px 20px; */
+	/* font-size: 18px; */
+	/* font-weight: bold; */
+	/* border-radius: 15px; */
+	/* text-align: center; */
+	/* width: 110px; */
+	/* border: 3px solid black; */
+}
