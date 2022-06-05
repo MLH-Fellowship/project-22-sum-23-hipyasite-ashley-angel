@@ -28,7 +28,7 @@
       <a class="nav-link" href="home">Home</a>
     </div>
     <div class="nav-item">
-      <a class="nav-link" href="about">about</a>
+      <a class="nav-link" href="about">About</a>
     </div>
     <div class="nav-item">
       <a class="nav-link" href="hobbies">Hobbies</a>
@@ -42,16 +42,15 @@
 
 <div class="about">
     <h1>About Me</h1>
-    <h2>I am a coffee drinker by day and a monster drinker by night. Did I say I run a lot? Yes, I do. Also Who is Lorem. Yeah Idk who that is.</h2>
+    <h2>{{ profile["about"] }}</h2>
 </div>
 
 <div class="altblock">
-    <h1>Lorem Ipsum</h1>
+    <h1>{{ profile["aboutsectiontitle"] }}</h1>
     <div class="split">
         <img class="imgpad" src="/static/img/iphonso.png">
         <div class="paragraph">
-            <p>Lorem Ipsum is a simply dummy text of printing and typesetting indusry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
-        <p>When an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+            {{ profile["aboutsectiontext"] | safe }}
         </div>
 
     </div>

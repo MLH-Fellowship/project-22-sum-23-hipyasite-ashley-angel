@@ -1,0 +1,70 @@
+{
+    "name": "Stryx",
+    "email": "angeldzambrano99@gmail.com",
+    "tagline": "I'm a tea drinker studying at the University of Cats and Stuff",
+    "about": "Tor is like an ogre, it has layers.",
+    "aboutsectiontitle": "Fresh Princess",
+    "aboutsectiontext": "<p>Now this is the story all about how,<br>My life got flipped-turned upside down,<br>And I'd like to take a minute, just sit right there,<br>I'll tell you how I became the princess of a town called Sacremento.</p>",
+    "hobbies": [
+        {
+            "name": "Hobby #1",
+            "imgblock": "<img class='imgpad' src='/static/img/davis.jpg'>",
+            "description": "<p class='paraa'>This photo was taken in Davis, California, USA.</p><p class='paraa'>Lorem Ipsum is a simply dummy text of printing and typesetting indusry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>",
+            "loc": "38.54220, -121.74960"
+        },
+        {
+            "name": "Hobby #2",
+            "imgblock": "<img class='imgpad' src='/static/img/boulder.jpg'>",
+            "description": "<p class='paraa'>This photo was taken in Boulder, Colorado, USA.</p><p class='paraa'>Lorem Ipsum is a simply dummy text of printing and typesetting indusry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>",
+            "loc": "40.0139, -105.2748"
+        },
+        {
+            "name": "My Jams 🎵",
+            "imgblock": "<iframe style='border-radius:12px' src='https://open.spotify.com/embed/album/5AghrM3hAuorTe16d3jBZO?utm_source=generator&theme=0' width='100%' height='380' frameBorder='0' allowfullscreen='' allow='autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture'></iframe>",
+            "description": "<p class='paraa'>Lorem Ipsum is a simply dummy text of printing and typesetting indusry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>",
+            "loc": "21.085,-86.847"
+        },
+        {
+            "name": "Hobby #4",
+            "imgblock": "<img class='imgpad' src='/static/img/edin.jpg'>",
+            "description": "<p class='paraa'>This photo was taken in Edinburgh, Scottland.</p><p class='paraa'>Lorem Ipsum is a simply dummy text of printing and typesetting indusry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>",
+            "loc": "55.9521, -3.1860"
+        }
+    ],
+    "experience": [
+        {
+            "date": "Fall 1970",
+            "sub1": "Founded amazon",
+            "sub2": "Bezos!"
+        },
+        {
+            "date": "Fall 2008",
+            "sub1": "Apple co-founder",
+            "sub2": "Yeah, steve."
+        },
+        {
+            "date": "Summer 2022",
+            "sub1": "Acquired HLH",
+            "sub2": "I am MLH"
+        },
+        {
+            "date": "Fall 2008",
+            "sub1": "Went to Mars",
+            "sub2": "Where da aliens at?"
+        }
+    ],
+    "projects": [
+        {
+            "name": "Metaverse",
+            "desc": "Back when I cofounded meta, we made the Metaverse, but it wasn't ready to release into the world until now.",
+            "link": "",
+            "tags": ["PHP"]
+        },
+        {
+            "name": "A Clock",
+            "desc": "Que hora es?",
+            "link": "",
+            "tags": ["HTML", "CSS", "JS"]
+        }
+    ]
+}

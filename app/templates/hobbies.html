@@ -31,7 +31,7 @@
       <a class="nav-link" href="home">Home</a>
     </div>
     <div class="nav-item">
-      <a class="nav-link" href="about">about</a>
+      <a class="nav-link" href="about">About</a>
     </div>
     <div class="nav-item">
       <a class="nav-link" href="hobbies">Hobbies</a>
@@ -54,51 +54,29 @@
       <div id="leafletmap"></div>
     </div>
 
-  <div id="hobby1" class="altblock">
-    <h1>Hobby #1</h1>
-    <div class="split">
-        <img class="imgpad" src="/static/img/davis.jpg">
-        <div class="paragraph">
-            <p class="paraa">Lorem Ipsum is a simply dummy text of printing and typesetting indusry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
-            <p class="paraa">When an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-        </div>
-
-    </div>
-</div>
-
-<div id="hobby2" class="mainblock">
-    <h1>Hobby #2</h1>
-    <div class="split">
-        <div class="paragraph">
-            <p class="paraa">Lorem Ipsum is a simply dummy text of printing and typesetting indusry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
-            <p class="paraa">When an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-        </div>
-        <img class="imgpad" src="/static/img/boulder.jpg">
-    </div>
-</div>
-
-<div id="hobby3" class="altblock">
-      <h1>My Jams 🎵</h1>
-      <div class="split">
-          <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/5AghrM3hAuorTe16d3jBZO?utm_source=generator&theme=0" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+  {% for x in range(profile["hobbies"] | length) %}
+    {% if x % 2 == 0 %}
+      <div id="hobby{{ x + 1 }}" class="altblock">
+        <h1>{{ profile["hobbies"][x]["name"] }}</h1>
+        <div class="split">
+          {{ profile["hobbies"][x]["imgblock"] | safe }}
           <div class="paragraph">
-              <p class="paraa">Lorem Ipsum is a simply dummy text of printing and typesetting indusry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
-              <p class="paraa">When an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+            {{ profile["hobbies"][x]["description"] | safe }}
           </div>
-      </div>
-  </div>
-
-<div id="hobby4" class="mainblock">
-    <h1>Hobby #4</h1>
-    <div class="split">
-        <div class="paragraph">
-            <p class="paraa">Lorem Ipsum is a simply dummy text of printing and typesetting indusry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
-            <p class="paraa">When an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
         </div>
-        <img class="imgpad" src="/static/img/edin.jpg">
-    </div>
-</div>
-
+      </div>  
+    {% else %}
+      <div id="hobby{{ x + 1 }}" class="mainblock">
+        <h1>{{ profile["hobbies"][x]["name"] }}</h1>
+        <div class="split">
+          <div class="paragraph">
+            {{ profile["hobbies"][x]["description"] | safe }}
+          </div>
+          {{ profile["hobbies"][x]["imgblock"] | safe }}
+        </div>
+      </div>
+    {% endif %}
+  {% endfor %}
 
 </body>
 
@@ -109,6 +87,24 @@
   integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
   crossorigin=""></script>
 
-  <script src="/static/js/mapscript.js"></script>
+  <script>
+    var map = L.map('leafletmap').setView([38.54220, -121.74960], 5);
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: '© OpenStreetMap'
+    }).addTo(map);
+
+    {% for x in range(profile["hobbies"] | length) %}
+      var marker{{ x + 1 }} = L.marker([{{ profile["hobbies"][x]["loc"] }}]).addTo(map).on("click", () => {
+          document.getElementById('hobby{{ x + 1 }}').scrollIntoView();
+      });
+    {% endfor %}
+
+    //var marker1 = L.marker([38.54220, -121.74960]).addTo(map).on("click", () => {
+    //    document.getElementById('hobby1').scrollIntoView();
+    //});
+
+  </script>
 
 </html>
