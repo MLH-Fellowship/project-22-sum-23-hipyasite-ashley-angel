@@ -223,6 +223,18 @@ a {
 }
 
 
+#leafletmap {
+    margin-top: 100px;
+    height: 60vh;
+    width: 100%;
+}
+
+.mappopup {
+    font-family: 'Noto Sans JP', sans-serif;
+    text-align: center;
+}
+
+
 
 /** =============== Nav Styling ===============*/
 #navbar {
