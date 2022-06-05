@@ -1,0 +1,16 @@
+
+#leafletmap {
+    margin-top: 100px;
+    height: 60vh;
+    width: 100%;
+}
+
+.mappopup {
+    font-family: 'Noto Sans JP', sans-serif;
+    text-align: center;
+}
+
+.paraa {
+	font-size: 18px;
+	margin: 50px;
+}
