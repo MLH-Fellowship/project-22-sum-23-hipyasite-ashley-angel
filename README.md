@@ -1,14 +1,9 @@
-# Production Engineering - Week 1 - Portfolio Site
+# Production Engineering - Week 1 - HipYaSite
 
-Welcome to the MLH Fellowship! During Week 1, you'll be working with Flask to build a portfolio site. This site will be the foundation for activities we do in future weeks so spend time this week making it your own and reflect your personality!
+for the hackathon we had to build a portfolio site. The templated site contains a home page with with our education and projects, an about me page and a hobbies page. The hobbies page implements a maps api to display the interesting places that we have been to. 
+
 
 ## Tasks
-
-Once you've got your portfolio downloaded and running using the instructions below, you should attempt to complete the following tasks.
-
-For each of these tasks, you should create an [Issue](https://docs.github.com/en/issues/tracking-your-work-with-issues/about-issues) and work on them in a new [branch](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-branches). When the task has been completed, you should open a [Pull Request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests) and get another fellow in your pod to give you feedback before merging it in.
-
-*Note: Make sure to include a link to the Issue you're working on inside of your Pull Request so your reviewer knows what you're working on!*
 
 ### GitHub Tasks
 - [x] Create Issues for each task below
@@ -30,9 +25,29 @@ For each of these tasks, you should create an [Issue](https://docs.github.com/en
 - [x] Add a menu bar that dynamically displays other pages in the app
 
 
-## Getting Started
+## CHallengeces we ran into 
+  - implementing templates with jinja 
+  - creating the timeline in the home page
 
-You need to do all your work here.
+## What we learned 
+- Angel:
+  - how to use html/css to create a timeline
+  - How to use flask with templates
+- Ashley 
+  - Using Jinja  and Flask. 
+  - using the open source map api to choose interesting locations.
+
+
+## Built With
+- Python 
+- Flask
+- Html/css
+- Javascript
+
+
+## What's next for HipYaSite
+- create a management system to customize the information inside of each page
+- implement dark mode
 
 ## Installation
 
@@ -71,6 +86,11 @@ You should get a response like this in the terminal:
 You'll now be able to access the website at `localhost:5000` or `127.0.0.1:5000` in the browser! 
 
 *Note: The portfolio site will only work on your local machine while you have it running inside of your terminal. We'll go through how to host it in the cloud in the next few weeks!* 
+
+
+
+
+
 
 ## Contributing
 
