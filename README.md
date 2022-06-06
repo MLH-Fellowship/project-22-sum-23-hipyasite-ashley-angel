@@ -1,7 +1,6 @@
 # Production Engineering - Week 1 - HipYaSite
 
-for the hackathon we had to build a portfolio site. The templated site contains a home page with with our education and projects, an about me page and a hobbies page. The hobbies page implements a maps api to display the interesting places that we have been to. 
-
+For the hackathon we had to build a portfolio site. The templated site contains a home page with with our education and projects, an about me page and a hobbies page. The hobbies page implements a maps api to display the interesting places that we have been to along with the hobbies done in that specific location. 
 
 ## Tasks
 
@@ -25,7 +24,7 @@ for the hackathon we had to build a portfolio site. The templated site contains 
 - [x] Add a menu bar that dynamically displays other pages in the app
 
 
-## CHallengeces we ran into 
+## Challenges we ran into 
   - implementing templates with jinja 
   - creating the timeline in the home page
 
