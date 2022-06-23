@@ -6,6 +6,9 @@
     <!-- <link lang='sass' rel="stylesheet" href="./static/styles/home.css"> -->
     <link lang='sass' rel="stylesheet" href="./static/styles/navBar.css">
     <link lang='sass' rel="stylesheet" href="./static/styles/about.css">
+    <link lang='sass' rel="stylesheet" href="./static/styles/posts.css">
+
+
 
     <link rel="icon" type="image/png" sizes="32x32" href="./static/img/logo.png">
 
@@ -34,7 +37,7 @@
       <a class="nav-link" href="hobbies">Hobbies</a>
     </div>
     <div class="nav-item">
-      <a class="nav-link" href="timeline">Timeline</a>
+        <a class="nav-link" href="timeline">Timeline</a>
     </div>
     <div class="nav-item">
       <a href="javascript:changeTheme()"> <img src="./static/img/sunicon.png" id="sun" class="icon hidden"> </a>
@@ -43,25 +46,22 @@
   </div>
 </div>
 
-<div class="about">
-    <h1>About Me</h1>
-    <h2>{{ profile["about"] }}</h2>
-</div>
-
-<div class="altblock">
-    <h1>{{ profile["aboutsectiontitle"] }}</h1>
-    <div class="split">
-        <img class="imgpad" src="/static/img/ma.png">
-        <div class="paragraph" style="padding-top: 50px;">
-            {{ profile["aboutsectiontext"] | safe }}
-        </div>
-
+  <div class="about">
+      <h1>Timeline</h1>
     </div>
 
-</div>
+    <div class="mainblock">
+        <h1>Post</h1>
+        <label for="name">Title: </label><input type="text" id="name" autocomplete="off">
+        <label for="email">Email: </label><input type="text" id="email" autocomplete="off">
+        <label for="content">Content: </label><input type="text" id="content" autocomplete="off">
+        <button id="submit" onclick="submitPost()">Submit</button>
+    </div>
 
+  <div id="posts"></div>
 
 </body>
 
+<script src="./static/js/timeline.js"></script> 
 
 </html>

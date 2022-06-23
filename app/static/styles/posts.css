@@ -1,0 +1,51 @@
+#posts {
+    padding: 100px;
+    margin-top: 10vh;
+}
+
+h2 {
+    font-weight: bold;
+    margin: 0;
+}
+
+h3 {
+    font-weight: normal;
+    margin: 0;
+}
+
+hr {
+    margin: 25px;
+}
+
+input {
+    height: 50px;
+    width: 500px;
+    font-size: 30px;
+}
+
+label {
+    margin-top: 20px;
+    font-size: 25px;
+}
+
+#content {
+    height: 50vh;
+    width: 80%;
+}
+
+#submit {
+    height: 100px;
+    width: 300px;
+    font-size: 30px;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: lightblue;
+    border: none;
+}
+
+#submit:hover {
+    background-color: darkcyan;
+    cursor: pointer;
+}

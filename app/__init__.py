@@ -1,6 +1,7 @@
 import os
 import json
 import datetime
+from html_sanitizer import Sanitizer
 from playhouse.shortcuts import model_to_dict
 from peewee import *
 from flask import Flask, render_template, request, redirect, url_for
@@ -31,6 +32,8 @@ mydb.create_tables([TimelinePost])
 
 profile = json.loads(open("app/profile.json", "r").read())
 
+sanitizer = Sanitizer()
+
 @app.route('/')
 def index():
     return redirect(url_for('home'))
@@ -48,11 +51,15 @@ def about():
 def hobbies():
     return render_template("hobbies.html", title="{{ profile['name'] }}'s Hobbies", profile=profile, url=os.getenv("URL"))
 
+@app.route("/timeline")
+def timeline():
+    return render_template("timeline.html", title="Timeline")
+
 @app.route('/api/timeline_post', methods=['POST'])
 def post_time_line_post():
-    name = request.form['name']
-    email = request.form['email']
-    content = request.form['content']
+    name = sanitizer.sanitize(request.form['name'])
+    email = sanitizer.sanitize(request.form['email'])
+    content = sanitizer.sanitize(request.form['content'])
     timeline_post = TimelinePost.create(name=name, email=email, content=content)
 
     return model_to_dict(timeline_post)
