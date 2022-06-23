@@ -6,4 +6,4 @@ git fetch && git reset origin/main --hard
 python -m venv python3-virtualenv
 source python3-virtualenv/bin/activate
 pip install -r requirements.txt
-tmux new "python -m venv python3-virtualenv;source python3-virtualenv/bin/activate;export FLASK_ENV=development;flask run"
+tmux new "python -m venv python3-virtualenv;source python3-virtusud
