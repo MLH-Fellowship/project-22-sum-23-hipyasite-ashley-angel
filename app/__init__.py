@@ -83,3 +83,6 @@ def delete_time_line_post():
     except:
         print("No such post")
     return str(s)
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0')
