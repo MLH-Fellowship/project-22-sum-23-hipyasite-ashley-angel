@@ -3,7 +3,8 @@
 tmux kill-server
 cd ~/project-22-sum-23-hipyasite-ashley-angel
 git fetch && git reset origin/main --hard
-python -m venv python3-virtualenv
+python3 -m venv python3-virtualenv
 source python3-virtualenv/bin/activate
-pip install -r requirements.txt
-tmux new "python -m venv python3-virtualenv;source python3-virtusud
+pip3 install --upgrade pip
+pip3 install -r requirements.txt
+tmux new "python3 -m venv python3-virtualenv;source python3-virtualenv/bin/activate;export FLASK_ENV=development;flask run --host=0.0.0.0"
