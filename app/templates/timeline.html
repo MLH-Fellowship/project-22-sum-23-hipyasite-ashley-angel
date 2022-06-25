@@ -13,6 +13,30 @@
       <input type="text" name="content">
       <button type="submit">Submit</button>
     </form>
+     <script>
+      const form = document.getElementById('form');
+
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+
+
+        const prePayload = new FormData(form);
+        const payload = new URLSearchParams (prePayload);
+
+
+        console.log([...payload])
+
+        fetch('http://206.189.196.47:5000/api/timeline_post', {
+          method: "POST",
+          body: prePayload,
+        })
+          .then(res => res.json())
+          .then(data => console.log(data))
+          .then(err => console.log(err));
+
+      })
+
+    </script>
 
 
   </body>
