@@ -37,6 +37,9 @@ profile = json.loads(open("app/profile.json", "r").read())
 def index():
     return redirect(url_for('home'))
 
+@app.route('/timeline')
+def timeline():
+    return render_template('timeline.html', title="timeline")
 
 @app.route('/home')
 def home():
