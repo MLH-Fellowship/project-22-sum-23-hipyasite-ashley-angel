@@ -1,4 +1,5 @@
 import os
+import sys
 import json
 import datetime
 from html_sanitizer import Sanitizer
@@ -6,6 +7,7 @@ from playhouse.shortcuts import model_to_dict
 from peewee import *
 from flask import Flask, render_template, request, redirect, url_for
 from dotenv import load_dotenv
+from werkzeug.exceptions import BadRequest
 
 load_dotenv()
 app = Flask(__name__)
@@ -57,12 +59,47 @@ def timeline():
 
 @app.route('/api/timeline_post', methods=['POST'])
 def post_time_line_post():
+    error=""
+    
+    if(not 'name'in request.form):
+        error+="Invalid name"
+    if(not 'content'in request.form):
+        error+="Invalid content"
+    if(not 'email'in request.form):
+        error+="Invalid email"
+
+    if(error.strip()):
+        raise BadRequest(error)
+        
+
     name = sanitizer.sanitize(request.form['name'])
     email = sanitizer.sanitize(request.form['email'])
     content = sanitizer.sanitize(request.form['content'])
-    timeline_post = TimelinePost.create(name=name, email=email, content=content)
+    
+    
+    if  not name.strip():
+        error += "Invalid name"
+        
+           
+    if not email or not email.strip() or '@' not in email:
+        error += "Invalid email"
+        
+    
+    if not content.strip() :
+        error += "Invalid content"
+        
 
-    return model_to_dict(timeline_post)
+    if( error.strip()):
+        raise BadRequest(error)
+        
+
+    else:
+        timeline_post = TimelinePost.create(name=name, email=email, content=content)
+        return model_to_dict(timeline_post)
+        
+   
+
+    
 
 @app.route("/api/timeline_post", methods=['GET'])
 def get_time_line_post():
