@@ -23,7 +23,7 @@ function submitPost() {
     postData.append("email", document.getElementById("email").value)
     postData.append("content", document.getElementById("content").value)
 
-    fetch("/api/timeline_post", {method: "POST", body: postData}).then((result) => {
+    fetch("/api/new_post", {method: "POST", body: postData}).then((result) => {
         location.reload()
     })
 }
