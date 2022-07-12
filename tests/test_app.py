@@ -42,7 +42,7 @@ class AppTestCase(unittest.TestCase):
             assert response.is_json
             json = response.get_json()
             assert "timeline_posts" in json
-            response = self.client.post("/api/timeline_post",data={"name":"Smrithi",'email':"test@test.com","content":"Hello World, I'm Smrithi."})
+            response = self.client.post("/api/new_post",data={"name":"Smrithi",'email':"test@test.com","content":"Hello World, I'm Smrithi."})
             response = self.client.get("/api/timeline_post")
             json = response.get_json()
             prev=len(json["timeline_posts"]) 
@@ -58,14 +58,14 @@ class AppTestCase(unittest.TestCase):
 
         def test_malformed_timeline_post(self):
 
-            response=self.client.post("/api/timeline_post",data={"name":"John Doe",'email':"not-an-email","content":"Hello World, I'm John."})
+            response=self.client.post("/api/new_post",data={"name":"John Doe",'email':"not-an-email","content":"Hello World, I'm John."})
             assert response.status_code==400
             html=response.get_data(as_text=True)
             assert "Invalid email" in html 
 
 
             #POST request missing name
-            response=self.client.post("/api/timeline_post", data={"email":"john@example.com","content":"Hello, world. I'm John."})
+            response=self.client.post("/api/new_post", data={"email":"john@example.com","content":"Hello, world. I'm John."})
             assert response.status_code==400
             html=response.get_data(as_text=True)
             assert "Invalid name" in html
@@ -73,7 +73,7 @@ class AppTestCase(unittest.TestCase):
             
 
             #POST request with empty content 
-            response=self.client.post("/api/timeline_post",data={"name":"John Doe","email":"john@example.com"})
+            response=self.client.post("/api/new_post",data={"name":"John Doe","email":"john@example.com"})
             assert response.status_code==400
             html=response.get_data(as_text=True)
             assert "Invalid content" in html
