@@ -10,4 +10,4 @@ COPY . .
 
 CMD ["flask", "run", "--host=0.0.0.0"]
 
-EXPOSE 8080
+EXPOSE 5000
