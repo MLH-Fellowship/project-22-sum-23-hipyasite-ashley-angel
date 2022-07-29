@@ -21,7 +21,6 @@ services:
     container_name: nginx
     image: jonasal/nginx-certbot
     restart: always
-
     ports:
       - 80:80
       - 443:443
