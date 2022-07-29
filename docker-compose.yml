@@ -6,7 +6,7 @@ services:
     restart: always
     env_file:
       - .env
-    environment:
+    environmentx:
       - FLASK_ENV=development
     ports:
       - "8080:5000"
