@@ -5,7 +5,7 @@ from app import TimelinePost
 MODELS = [TimelinePost]
 
 db = SqliteDatabase(":memory:")
-
+#
 class TestTimlinePost(TestCase):
     def setUp(self) -> None:
         db.bind(MODELS, bind_refs=False, bind_backrefs=False)
@@ -40,4 +40,3 @@ class TestTimlinePost(TestCase):
         post_count: int = TimelinePost.select().count()
 
         assert post_count == 0
-
